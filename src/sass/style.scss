@@ -1,0 +1,218 @@
+@import 'base';
+@include font('Ubuntu', './../assets/fonts/Ubuntu-Regular');
+@include font('Ubuntu-Medium', '../assets/fonts/Ubuntu-Medium');
+@include font('Ubuntu-MediumItalic', '../assets/fonts/Ubuntu-MediumItalic');
+@include font('Ubuntu-Bold', '../assets/fonts/Ubuntu-Bold');
+@include font('Ubuntu-Italic', '../assets/fonts/Ubuntu-Italic');
+@include font('Ubuntu-BoldItalic', '../assets/fonts/Ubuntu-BoldItalic');
+@include font('Ubuntu-Light', '../assets/fonts/Ubuntu-Light');
+@include font('Ubuntu-LightItalic', '../assets/fonts/Ubuntu-LightItalic');
+
+
+html, body {
+    color: #545454;
+    font-family: Ubuntu-Bold, sans-serif;
+    font-style: normal;
+    line-height: 1.4em;
+    font-size: 18px;    
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    &.center {
+        justify-content: center;    
+    }
+
+}
+
+header {
+    background-image: url(../assets/images/header.png);
+    background-size: 100% 100%;
+
+    img {
+        margin-top: -10px;
+        padding: 0 0 100px 15%;
+        width: 150px;
+    }
+}
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+}  
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}  
+
+h4 {
+    text-align: center;
+    font-family: Ubuntu-Light, sans-serif;
+    font-size: 14px;
+}
+
+.images {
+    box-shadow: 0px 0px 7px #e5e5e5;
+    margin: 15px;   
+    padding: 3px;
+}
+
+.formSection {
+    width: 100% !important; // overwriting the section width
+    padding-bottom: 20px;
+    background-color: #f7f7f7;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-evenly;
+
+    .formContent {
+
+        .form {
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 5px 5px 10px #e5e5e5;
+
+            label {
+                font-size: 14px;           
+            }
+
+            p { 
+                font-size: 18px; 
+
+                &.light {
+                    font-family: Ubuntu-Italic, sans-serif;  
+                    font-size: 12px;
+                    margin: 0px;
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 50px;
+                margin: 5px 0px 15px; 
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            button {
+                border: 0;
+                border-radius: 3px;
+                width: 130px;
+                height: 50px;
+                font-family: Ubuntu-Bold, sans-serif;
+                color: #fff;
+                background-color: #e26306;
+            }
+
+            .center {
+                text-align: center;
+            }
+            
+        }
+    }
+}
+
+.nameValidation, .emailValidation, .telephoneValidation {
+    display: none;
+    font-size: 14px;
+    font-family: Ubuntu, sans-serif;
+    margin-top: -10px;
+    
+    &.error {
+        display: block;
+        color: red;
+    }
+}
+
+footer {
+    background-color: #545454;
+    height: 10%;
+
+    img {
+        width: 85px;
+        padding-left: 15%;
+    }
+}
+
+/* Media query for big devices */
+
+@media screen and (min-width: 768px){
+    
+    header, section {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 45px;
+        text-align: center;
+    }  
+    
+    h2 {
+        font-size: 35px;
+        text-align: center;
+    }  
+    
+    h4 {
+        text-align: center;
+        font-family: Ubuntu-Light, sans-serif;
+        font-size: 20px;
+    }
+
+    .formSection {
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width: 1280px){
+   
+    section {
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &.title {
+            width: 800px;
+        }
+    }
+
+    h1 {
+        font-size: 45px;
+        text-align: center;
+    }  
+    
+    h2 {
+        font-size: 35px;
+        text-align: center;
+    }  
+    
+    h4 {
+        text-align: center;
+        font-family: Ubuntu-Light, sans-serif;
+        font-size: 20px;
+    }
+
+    .formSection {
+        padding: 50px;
+    }
+}
