@@ -1,5 +1,8 @@
 // Wait for the DOM to be ready
 $(function() {
+    // there are different validation libraries in jquery that offer more features but I wanted to implement a own solution. 
+    // It is quite simple, more validations would be necessary in order to validate the kind and format of the data sent
+    
     $("#commentForm").submit(function(event) {
         if ($("input[name='name']").val() === '') {
             $(".nameValidation").addClass('error');
